@@ -10,4 +10,4 @@ This is a react app that generates a random recipe everytime you click on the **
 
 ### Demo
 
-[demo.gif](demo.gif)
+![demo.gif](demo.gif)
