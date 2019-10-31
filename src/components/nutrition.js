@@ -3,7 +3,7 @@ import React, {useState }from 'react';
 export default function Nutrition({data}) {
     let [hover, setHover] = useState(false);
     const nutritionInfo = data.bad ? data.bad.concat(data.good[0]):[];
-    console.log( nutritionInfo)
+    // console.log( nutritionInfo)
     return (
         <div className='nutritionInfo'>
             {nutritionInfo.map(i => 

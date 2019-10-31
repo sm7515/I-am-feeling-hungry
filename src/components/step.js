@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 export default function Step({data}){
     const steparray=[];
     let [hover, setHover] = useState(false);
-    console.log(data)
-    console.log(data.length)
+    // console.log(data)
+    // console.log(data.length)
     let k=0;
     if(data.length>0){
         for (let i = 0; i < data.length; i++) {
@@ -20,7 +20,7 @@ export default function Step({data}){
 
     return(
         <ol>
-            {steparray.map((i, key) => <li><span className='number'>{key+1}</span>
+            {steparray.map((i, key) => <li><span className='number' id={hover?'hoverNum':''}>{key+1}</span>
                 <span onMouseOver={()=>{setHover(true)}} onMouseOut={()=>{setHover(false)}} className="text">{i}</span></li>)}
         </ol>
     )
