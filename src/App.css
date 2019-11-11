@@ -290,3 +290,111 @@ li {
   font-weight: bolder;
   margin:0 0 30px 0;
 }
+
+.input-box{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom:2px solid white;
+  color: white;
+  padding: 20px 50px 20px 50px;
+  font-size: 40px;
+}
+
+.container.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box-after{
+  padding: 20px 50px 20px 50px;
+  position: absolute;
+  left: 400px;
+  font-size: 40px;
+  outline: none;
+  border: none;
+  border-bottom:2px solid #F46001;
+}
+
+.input-box::placeholder{
+  color:rgba(255, 255, 255, 0.5)
+}
+
+h2{
+  color:white;
+}
+
+.random-link,.random-link-after{
+  color:#F46001;
+  text-decoration:none;
+  margin-top: 20px;
+}
+
+.random-link-after{
+  position: absolute;
+  left: 400px;
+}
+
+.random-link:hover,.random-link-after:hover{
+  color:white;
+  background-color: #F46001;
+  padding:10px;
+  border-radius: 25px;
+  font-weight: bolder;
+}
+
+.random-link:active,.random-link-after:active{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.input-h2{
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+
+.inputbar 	{ position:relative; display:block; width: 500px;height: 2px; 
+}
+.inputbar:before, .inputbar:after 	{
+  content:'';
+  height:3px; 
+  width: 0;
+  bottom:1px; 
+  position:absolute;
+  background-color:#F46001; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.inputbar:before {
+  left:50%;
+}
+.inputbar:after {
+  right:50%; 
+}
+
+.input-box:focus ~ .inputbar:before, .input-box:focus ~ .inputbar:after {
+  width:50%;
+}
+
+/* .bar{
+  position: absolute;
+  width: 500px;
+  height:20%; 
+  top:25%; 
+  left:25%;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+
+.input-box:focus ~ .bar{
+  animation:inputHighlighter 1s ease;
+}
+
+@keyframes inputHighlighter {
+	from { background:#F46001; }
+  to 	{ width:0; background:transparent; }
+} */
