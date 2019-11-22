@@ -255,7 +255,8 @@ li {
     transparent 5px,
     #fff 5px,
     #fff 10px
-  )
+  );
+  outline: none;
 }
 
 .ingre{
@@ -335,6 +336,7 @@ h2{
 .random-link-after{
   position: absolute;
   left: 400px;
+  display: none;
 }
 
 .random-link:hover,.random-link-after:hover{

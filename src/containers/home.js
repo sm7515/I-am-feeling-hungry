@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import {createRef} from "react"
+import DisplaySearchResults from '../components/search'
 
 export default function Home() {
     let [food, setFood]=useState("");
@@ -13,7 +14,6 @@ export default function Home() {
     }
 
     const handleKeyUp =(e)=> {
-        console.log(e)
         if (e.keyCode === 13) {
             setEnter(true)
         }
@@ -40,6 +40,7 @@ export default function Home() {
             <span className={enter?"bar-after":"inputbar"}></span>
             <a href="random-recipe" className={enter?"random-link-after":"random-link"}>surprise me</a>
             <h2 className={enter?"input-h2-after":"input-h2"}>{food}</h2>
+            {enter?<DisplaySearchResults foodname={food} />:""}
         </div>
     )
 }

@@ -24,7 +24,7 @@ class Random extends React.Component {
     }
 
     getInfo(){
-        axios.get(`https://api.spoonacular.com/recipes/random?apiKey=b40b5b8a881644c0bfd71e7ed3c2cbf6`)
+        axios.get(`https://api.spoonacular.com/recipes/random?apiKey=ce67055e24114f90a2ede346b6d5dcef`)
             .then(res=>{
                 this.setState({ recipe: res.data.recipes[0], 
                                 id: res.data.recipes[0].id,
@@ -38,14 +38,14 @@ class Random extends React.Component {
     }
 
     getStep(){
-        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/analyzedInstructions?apiKey=b40b5b8a881644c0bfd71e7ed3c2cbf6`)
+        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/analyzedInstructions?apiKey=ce67055e24114f90a2ede346b6d5dcef`)
             .then((res)=>{
                 this.setState({step:res.data});
             })
     }
 
     getNutrition(){
-        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/nutritionWidget.json?apiKey=b40b5b8a881644c0bfd71e7ed3c2cbf6`)
+        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/nutritionWidget.json?apiKey=ce67055e24114f90a2ede346b6d5dcef`)
             .then((res)=>{
                 this.setState({nutrition:res.data});
                 console.log(this.state.nutrition);
@@ -54,7 +54,7 @@ class Random extends React.Component {
     }
 
     getIngredients(){
-        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/ingredientWidget.json?apiKey=b40b5b8a881644c0bfd71e7ed3c2cbf6`)
+        axios.get(`https://api.spoonacular.com/recipes/${this.state.id}/ingredientWidget.json?apiKey=ce67055e24114f90a2ede346b6d5dcef`)
             .then((res) => {
                 this.setState({ ingredients: res.data.ingredients });
                 console.log(res.data.ingredients);
